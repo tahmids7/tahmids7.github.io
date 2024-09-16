@@ -10,6 +10,7 @@ body {
 
 body {
   display: flex;
+  position: relative;
 }
 
 body::before {
@@ -81,6 +82,23 @@ main {
 @keyframes underlineMove {
   0% { transform: translateX(-100%); }
   100% { transform: translateX(100%); }
+}
+
+/* Bottom underline animation */
+body::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,0.6));
+  animation: bottomUnderlineMove 4s linear infinite;
+  width: 100vw; /* Make the underline span across the page */
+}
+
+@keyframes bottomUnderlineMove {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
 }
 
 .description {
