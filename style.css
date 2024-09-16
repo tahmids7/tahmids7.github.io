@@ -108,6 +108,40 @@ body::after {
   text-align: center;
 }
 
+/* Left-side rotating cog */
+.rotating-cog {
+  position: absolute;
+  top: 50%;           /* Center vertically */
+  left: 50px;         /* Distance from the left */
+  transform: translateY(-50%);  /* Offset to center vertically */
+  width: 128px;       /* Increased size of the cog */
+  height: 128px;      /* Increased size of the cog */
+  fill: #fff !important;         /* Make the cog white */
+  animation: rotateCog 3s linear infinite; /* Infinite rotation */
+}
+
+/* Right-side rotating cog */
+.rotating-cog-right {
+  position: absolute;
+  top: 50%;           /* Center vertically */
+  right: 50px;        /* Distance from the right */
+  transform: translateY(-50%);  /* Offset to center vertically */
+  width: 128px;       /* Increased size of the cog */
+  height: 128px;      /* Increased size of the cog */
+  fill: #fff !important;         /* Make the cog white */
+  animation: rotateCog 3s linear infinite reverse; /* Infinite rotation (opposite direction) */
+}
+
+/* Keyframe animation for cog rotation */
+@keyframes rotateCog {
+  0% {
+    transform: translateY(-50%) rotate(0deg);  /* Start position */
+  }
+  100% {
+    transform: translateY(-50%) rotate(360deg);  /* Full rotation */
+  }
+}
+
 .grid {
   display: flex;
   align-items: center;
