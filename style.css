@@ -94,7 +94,7 @@ body::after {
   transform: translateY(-50%); 
   width: 128px;      
   height: 128px;      
-  fill: #fff !important;         
+  fill: red !important;         
   animation: rotateCog 3s linear infinite; /* Infinite rotation */
 }
 
@@ -106,7 +106,7 @@ body::after {
   transform: translateY(-50%);  
   width: 128px;       
   height: 128px;      
-  fill: #fff !important;         
+  fill: red !important;         
   animation: rotateCog 3s linear infinite reverse; /* Infinite rotation (opposite direction) */
 }
 
