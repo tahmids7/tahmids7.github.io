@@ -54,32 +54,6 @@ main {
   z-index: 0;
 }
 
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 3rem;
-  text-align: center;
-  position: relative;
-  color: #ff0055;
-  text-decoration: underline;
-  text-decoration-thickness: 3px;
-  text-decoration-color: rgba(255, 255, 255, 0.5);
-  /* Reduced glow intensity */
-  text-shadow: 0 0 5px rgba(255, 255, 255, 0.4), 0 0 10px rgba(255, 0, 0, 0.3), 0 0 15px rgba(255, 0, 0, 0.5);
-}
-
-.title::before {
-  content: '';
-  position: absolute; /* Changed to fixed to allow it to span the entire page */
-  top: 110%; /* Adjust this value to move the underline down */
-  left: 0;
-  right: 0; /* Ensures the underline stretches across the entire screen */
-  height: 3px;
-  background: linear-gradient(90deg, rgba(255,255,255,0.6), rgba(255,255,255,0));
-  animation: underlineMove 4s linear infinite;
-  z-index: 2; /* Ensure the underline is above other content */
-}
-
 
 @keyframes underlineMove {
   0% { transform: translateX(-100%); }
@@ -97,7 +71,7 @@ body::after {
   height: 3px;
   background: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,0.6));
   animation: bottomUnderlineMove 4s linear infinite;
-  width: 100vw; /* Make the underline span across the page */
+  width: 100vw; 
 }
 
 @keyframes bottomUnderlineMove {
@@ -115,34 +89,34 @@ body::after {
 /* Left-side rotating cog */
 .rotating-cog {
   position: absolute;
-  top: 50%;           /* Center vertically */
-  left: 50px;         /* Distance from the left */
-  transform: translateY(-50%);  /* Offset to center vertically */
-  width: 128px;       /* Increased size of the cog */
-  height: 128px;      /* Increased size of the cog */
-  fill: #fff !important;         /* Make the cog white */
+  top: 50%;           
+  left: 50px;         
+  transform: translateY(-50%); 
+  width: 128px;      
+  height: 128px;      
+  fill: #fff !important;         
   animation: rotateCog 3s linear infinite; /* Infinite rotation */
 }
 
 /* Right-side rotating cog */
 .rotating-cog-right {
   position: absolute;
-  top: 50%;           /* Center vertically */
-  right: 50px;        /* Distance from the right */
-  transform: translateY(-50%);  /* Offset to center vertically */
-  width: 128px;       /* Increased size of the cog */
-  height: 128px;      /* Increased size of the cog */
-  fill: #fff !important;         /* Make the cog white */
+  top: 50%;           
+  right: 50px;       
+  transform: translateY(-50%);  
+  width: 128px;       
+  height: 128px;      
+  fill: #fff !important;         
   animation: rotateCog 3s linear infinite reverse; /* Infinite rotation (opposite direction) */
 }
 
 /* Keyframe animation for cog rotation */
 @keyframes rotateCog {
   0% {
-    transform: translateY(-50%) rotate(0deg);  /* Start position */
+    transform: translateY(-50%) rotate(0deg);  /* Start for rotate */
   }
   100% {
-    transform: translateY(-50%) rotate(360deg);  /* Full rotation */
+    transform: translateY(-50%) rotate(360deg);  /* end of full rotation */
   }
 }
 
@@ -188,20 +162,20 @@ body::after {
 /* ABOUT ME */
 .about-link {
     position: fixed;
-    bottom: 90px;  /* Distance from the bottom */
-    left: 10px;    /* Distance from the left */
-    font-size: 36px;  /* Increased font size */
-    color: yellow;    /* Adjust color as per your design */
+    bottom: 90px;  
+    left: 10px;   
+    font-size: 36px;  
+    color: yellow;   
     text-decoration: none;
     font-weight: bold;
-    z-index: 1000; /* Ensure it stays on top */
-    opacity: 1;    /* Starting opacity */
+    z-index: 1000; 
+    opacity: 1;    
     animation: spinPause 20s ease-in-out infinite, fadeInOut 3s ease-in-out infinite; /* Apply spin and fade animations */
 }
 
 .about-link:hover {
     text-decoration: underline;
-    color: blue; /* Blue on hover, adjust as you like */
+    color: blue; 
 }
 
 /* Define keyframe animation for spinning and pausing */
@@ -234,14 +208,14 @@ body::after {
 /* CONTACT INFO */
 .contact-link {
     position: fixed;
-    bottom: 90px;  /* Distance from the bottom */
-    right: 10px;   /* Distance from the right */
-    font-size: 36px;  /* Increased font size */
-    color: yellow;    /* Adjust color as per your design */
+    bottom: 90px;  
+    right: 10px;   
+    font-size: 36px; 
+    color: yellow;   
     text-decoration: none;
     font-weight: bold;
-    z-index: 1000; /* Ensure it stays on top */
-    opacity: 1;    /* Starting opacity */
+    z-index: 1000; 
+    opacity: 1;   
     animation: spinPause 20s ease-in-out infinite, fadeInOut 3s ease-in-out infinite; /* Apply spin and fade animations */
 }
 
@@ -266,13 +240,12 @@ body::after {
     }
 }
 
-/* Define keyframe animation for fading */
 @keyframes fadeInOut {
     0%, 100% { 
-        opacity: 0;  /* Fully transparent */
+        opacity: 0; 
     }
     50% { 
-        opacity: 1;  /* Fully visible */
+        opacity: 1;  
     }
 }
 
@@ -378,7 +351,7 @@ body::after {
 .glitch {
   position: relative;
   display: inline-block;
-  color: red;  /* Main font color set to red */
+  color: red;  
   animation: glitch-skew 1s infinite ease-in-out;
 }
 
@@ -397,13 +370,13 @@ body::after {
 
 .glitch::before {
   left: -2px;
-  text-shadow: -2px 0 blue; /* Glitch color set to blue */
+  text-shadow: -2px 0 blue; 
   animation: glitch-before 1s infinite ease-in-out;
 }
 
 .glitch::after {
   left: 2px;
-  text-shadow: -2px 0 lime; /* Glitch color set to lime green */
+  text-shadow: -2px 0 lime; 
   animation: glitch-after 1s infinite ease-in-out;
 }
 
