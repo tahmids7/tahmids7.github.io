@@ -4,12 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Tahmid Sahan</title>
-    <link rel="stylesheet" href="style.css"> <!-- Link to your main CSS file -->
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        (function(){
+            emailjs.init("ETgr4c3PBWg0Ubndo");
+        })();
+    </script>
 </head>
 <body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+        </nav>
+    </header>
 
-
-    <!-- Insert the cog SVG -->
     <svg class="rotating-cog" xmlns="http://www.w3.org/2000/svg" version="1.0"
         width="221.000000pt" height="228.000000pt" viewBox="0 0 221.000000 228.000000"
         preserveAspectRatio="xMidYMid meet">
@@ -44,32 +53,23 @@
                 <path d="M1250 605 c-30 -7 -68 -14 -84 -14 -16 -1 -27 -4 -23 -7 8 -8 177 17 183 28 6 10 -6 9 -76 -7z"/>
         </g>
     </svg>
-    <header>
-        <nav>
-            <a href="index.html">Home</a> <!-- Link back to your home page -->
-        </nav>
-    </header>
 
     <main>
         <section id="contact-info">
             <h2>Contact Me</h2>
             <p>If you’d like to get in touch, feel free to reach out via any of the platforms below:</p>
 
-            <ul>
-                <li>Primary Email: <a href="mailto:novacrash777@gmail.com">novacrash777@gmail.com</a></li>
+            <li>Primary Email: <a href="mailto:novacrash777@gmail.com">novacrash777@gmail.com</a></li>
                 <li>Secondary Email: <a href="mailto:tahmid.sahan55@myhunter.cuny.edu">tahmid.sahan55@myhunter.cuny.edu</a></li>
                 <li>LinkedIn: <a href="https://www.linkedin.com/in/tahmid-sahan" target="_blank">linkedin.com/in/tahmid-sahan</a></li>
                 <li>GitHub: <a href="https://github.com/tahmids7" target="_blank">github.com/tahmids7</a></li>
                 <li>Phone: <a href="tel:+13474402763">+1 (347) 440-2763</a></li>
-                <li>Instagram: x.tahmid.x</a></li>
-                <li>Facebook: Tahmid Sahan</a></li>
                 <li>Discord: txhmids</a></li>
                 <li>Twitter: txhmids</a></li>
-                <li>Tiktok: txhmid_s</a></li>
             </ul>
 
-                <!-- Contact Form -->
-            <form action="#" method="post">
+            
+            <form id="contact-form">
                 <label for="name">Your Name:</label><br>
                 <input type="text" id="name" name="name" required><br>
 
