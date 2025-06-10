@@ -5,7 +5,8 @@ body {
   height: 100%;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   color: red;
-  overflow: hidden;
+  overflow-x: hidden;  /* Only hide horizontal overflow */
+  overflow-y: auto;    /* Enable vertical scrolling */
   background-image: url('https://c4.wallpaperflare.com/wallpaper/897/860/916/road-mist-dark-asphalt-night-pine-trees-forest-wallpaper-preview.jpg'); 
   background-size: cover; 
   background-position: center;
@@ -49,10 +50,9 @@ a {
 
 main {
   flex: 1;
-  padding: 4rem 2rem;
+  padding: 6rem 2rem 4rem; /* top padding increased for breathing room */
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   position: relative;
   z-index: 0;
@@ -76,6 +76,10 @@ body::after {
   background: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,0.6));
   animation: bottomUnderlineMove 4s linear infinite;
   width: 100vw; 
+}
+
+.projects-page::after {
+  display: none;
 }
 
 @keyframes bottomUnderlineMove {
@@ -384,3 +388,23 @@ body::after {
   animation: glitch-after 1s infinite ease-in-out;
 }
 
+back-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: yellow;
+  text-decoration: none;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 8px 16px;
+  border-radius: 8px;
+  z-index: 1001;
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  color: cyan;
+  background: rgba(0, 0, 0, 0.9);
+  text-decoration: underline;
+}
