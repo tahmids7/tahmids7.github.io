@@ -388,7 +388,7 @@ body::after {
   animation: glitch-after 1s infinite ease-in-out;
 }
 
-back-button {
+.back-button {
   position: fixed;
   top: 20px;
   left: 20px;

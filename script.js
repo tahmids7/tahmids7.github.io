@@ -1,15 +1,19 @@
-emailjs.init("ETgr4c3PBWg0Ubndo");
+const contactForm = document.getElementById('contact-form');
 
-// Listen for form submission
-document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault();
+if (contactForm && window.emailjs) {
+    emailjs.init("ETgr4c3PBWg0Ubndo");
 
-    emailjs.sendForm('service_v3p06tb', 'template_ekuultg', this)
-        .then(function(response) {
-            alert('Message sent successfully!');
-            console.log('SUCCESS!', response.status, response.text);
-        }, function(error) {
-            alert('Failed to send the message. Please try again later.');
-            console.log('FAILED...', error);
-        });
-});
+    // Listen for form submission
+    contactForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        emailjs.sendForm('service_v3p06tb', 'template_ekuultg', this)
+            .then(function(response) {
+                alert('Message sent successfully!');
+                console.log('SUCCESS!', response.status, response.text);
+            }, function(error) {
+                alert('Failed to send the message. Please try again later.');
+                console.log('FAILED...', error);
+            });
+    });
+}
