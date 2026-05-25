@@ -7,9 +7,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <a href="about.html" class="about-link">About Me!</a>
-    <a href="contact.html" class="contact-link">Contact Info</a>
-
     <!-- Insert the cog SVG -->
     <svg class="rotating-cog" xmlns="http://www.w3.org/2000/svg" version="1.0"
         width="221.000000pt" height="228.000000pt" viewBox="0 0 221.000000 228.000000"
@@ -47,9 +44,16 @@
     </svg>
 
     <main>
-        <h1 class="title glitch" data-text="Welcome to Tahmid Sahan's Website!">Welcome to Tahmid Sahan's Website!</h1>
-        <p class="description">Below are a few of the things you can click on to learn more about me!</p>
-        <section class="grid">
+        <section class="home-hero">
+            <h1 class="title">Tahmid Sahan</h1>
+            <p class="role-pill">Business Analyst @ Verisk</p>
+        </section>
+
+        <section class="grid home-grid">
+            <a href="about.html" class="card">
+                <h2>About Me &rarr;</h2>
+                <p>Learn more about my background, coursework, and interests.</p>
+            </a>
             <a href="https://www.linkedin.com/in/tahmid-sahan/" class='card'>
                 <h2>LinkedIn &rarr;</h2>
                 <p>Look into where I've worked/interned + why not connect with me as well!</p>
@@ -61,6 +65,10 @@
             <a href="projects.html" class="card">
               <h2>Projects &rarr;</h2>
               <p>View some projects here!</p>
+            </a>
+            <a href="contact.html" class="card">
+                <h2>Contact &rarr;</h2>
+                <p>Reach me by email, LinkedIn, GitHub, phone, or a direct message.</p>
             </a>
         </section>
     </main>

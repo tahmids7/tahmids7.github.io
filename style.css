@@ -4,13 +4,15 @@ body {
   margin: 0;
   height: 100%;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  color: red;
+  color: #d9f4ff;
   overflow-x: hidden;  /* Only hide horizontal overflow */
   overflow-y: auto;    /* Enable vertical scrolling */
-  background-image: url('https://c4.wallpaperflare.com/wallpaper/897/860/916/road-mist-dark-asphalt-night-pine-trees-forest-wallpaper-preview.jpg'); 
+  background-color: #05111b;
+  background-image: url('assets/city-skyline-wallpaper.jpg');
   background-size: cover; 
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 body {
@@ -20,14 +22,14 @@ body {
 
 body::before {
   content: "";
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, #000000, #333333);
-  background-size: 400% 400%;
-  animation: moveBackground 15s ease infinite;
+  background:
+    linear-gradient(180deg, rgba(2, 8, 14, 0.44), rgba(1, 6, 12, 0.74)),
+    radial-gradient(circle at center, rgba(15, 60, 82, 0.18), rgba(0, 0, 0, 0.42));
   z-index: -1;
 }
 
@@ -58,6 +60,53 @@ main {
   z-index: 0;
 }
 
+.home-hero {
+  width: min(920px, calc(100vw - 4rem));
+  min-height: 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin: 1.5rem 0 2.5rem;
+  border-top: 1px solid rgba(160, 220, 255, 0.38);
+  border-bottom: 1px solid rgba(160, 220, 255, 0.38);
+  background: rgba(2, 12, 22, 0.74);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.32);
+}
+
+.title {
+  margin: 0;
+  color: #f7fbff;
+  font-size: clamp(3rem, 8vw, 5.5rem);
+  line-height: 1;
+  font-weight: 800;
+  text-align: center;
+  text-shadow: 0 4px 24px rgba(0, 0, 0, 0.72);
+}
+
+.role-pill {
+  margin: 0;
+  padding: 0.65rem 1.6rem;
+  border: 3px solid #66d9ff;
+  border-radius: 999px;
+  color: #c8f3ff;
+  background: rgba(2, 16, 28, 0.68);
+  font-size: clamp(1.1rem, 3vw, 1.65rem);
+  font-weight: 800;
+  line-height: 1.1;
+  text-align: center;
+  box-shadow: 0 0 28px rgba(102, 217, 255, 0.14);
+}
+
+.home-grid {
+  width: min(920px, calc(100vw - 4rem));
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  max-width: none;
+}
+
 
 @keyframes underlineMove {
   0% { transform: translateX(-100%); }
@@ -66,32 +115,62 @@ main {
 
 
 
-/* Bottom underline animation */
-body::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 3px;
-  background: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,0.6));
-  animation: bottomUnderlineMove 4s linear infinite;
-  width: 100vw; 
-}
-
-.projects-page::after {
-  display: none;
-}
-
-@keyframes bottomUnderlineMove {
-  0% { transform: translateX(100%); }
-  100% { transform: translateX(-100%); }
-}
-
 .description {
   margin: 4rem 0;
   line-height: 1.5;
   font-size: 1.5rem;
   text-align: center;
+}
+
+#contact-info {
+  width: min(900px, calc(100vw - 4rem));
+  padding: 1.5rem;
+  background: rgba(2, 13, 24, 0.82);
+  border: 1px solid rgba(171, 223, 255, 0.28);
+  border-radius: 8px;
+  box-shadow: 0 18px 46px rgba(0, 0, 0, 0.28);
+}
+
+#contact-info h2 {
+  margin-top: 0;
+  color: #f7fbff;
+}
+
+#contact-info li,
+#contact-info p,
+#contact-info label {
+  color: #d9f4ff;
+}
+
+#contact-info a {
+  color: #8de3ff;
+}
+
+#contact-info textarea,
+#contact-info input[type="submit"] {
+  width: 100%;
+  margin-top: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid rgba(141, 227, 255, 0.35);
+  background: rgba(0, 8, 15, 0.86);
+  color: #f7fbff;
+}
+
+#contact-info textarea {
+  min-height: 140px;
+  padding: 0.9rem;
+  resize: vertical;
+}
+
+#contact-info input[type="submit"] {
+  cursor: pointer;
+  padding: 0.8rem 1rem;
+  font-weight: 800;
+}
+
+#contact-info input[type="submit"]:hover {
+  border-color: #66d9ff;
+  background: rgba(7, 32, 50, 0.92);
 }
 
 /* Left-side rotating cog */
@@ -102,8 +181,9 @@ body::after {
   transform: translateY(-50%); 
   width: 128px;      
   height: 128px;      
-  fill: red !important;         
+  fill: #66d9ff !important;         
   animation: rotateCog 3s linear infinite; /* Infinite rotation */
+  filter: drop-shadow(0 0 10px rgba(102, 217, 255, 0.45));
 }
 
 /* Right-side rotating cog */
@@ -114,8 +194,9 @@ body::after {
   transform: translateY(-50%);  
   width: 128px;       
   height: 128px;      
-  fill: red !important;         
+  fill: #66d9ff !important;         
   animation: rotateCog 3s linear infinite reverse; /* Infinite rotation (opposite direction) */
+  filter: drop-shadow(0 0 10px rgba(102, 217, 255, 0.45));
 }
 
 /* Keyframe animation for cog rotation */
@@ -137,33 +218,38 @@ body::after {
 }
 
 .card {
-  margin: 1rem;
+  margin: 0;
   padding: 1.5rem;
   text-align: left;
   color: inherit;
   text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-  max-width: 300px;
+  border: 1px solid rgba(171, 223, 255, 0.32);
+  border-radius: 8px;
+  background: rgba(2, 13, 24, 0.82);
+  transition: color 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+  max-width: none;
+  box-shadow: 0 18px 46px rgba(0, 0, 0, 0.28);
 }
 
 .card:hover,
 .card:focus,
 .card:active {
-  color: #0070a3;
-  border-color: #0070f3;
+  color: #ffffff;
+  border-color: #66d9ff;
+  transform: translateY(-3px);
 }
 
 .card h2 {
   margin: 0 0 1rem 0;
   font-size: 1.5rem;
+  color: #8de3ff;
 }
 
 .card p {
   margin: 0;
-  font-size: 1.25rem;
+  font-size: 1.05rem;
   line-height: 1.5;
+  color: #d9f4ff;
 }
 
 
@@ -262,6 +348,15 @@ body::after {
     width: 100%;
     flex-direction: column;
   }
+
+  .home-hero,
+  .home-grid {
+    width: min(100%, calc(100vw - 2rem));
+  }
+
+  main {
+    padding-inline: 1rem;
+  }
 }
 
 .afterglow {
@@ -359,7 +454,7 @@ body::after {
 .glitch {
   position: relative;
   display: inline-block;
-  color: red;  
+  color: #8de3ff;  
   animation: glitch-skew 1s infinite ease-in-out;
 }
 
@@ -378,13 +473,13 @@ body::after {
 
 .glitch::before {
   left: -2px;
-  text-shadow: -2px 0 blue; 
+  text-shadow: -2px 0 #ff7ab6; 
   animation: glitch-before 1s infinite ease-in-out;
 }
 
 .glitch::after {
   left: 2px;
-  text-shadow: -2px 0 lime; 
+  text-shadow: -2px 0 #7dffcf; 
   animation: glitch-after 1s infinite ease-in-out;
 }
 
@@ -394,9 +489,10 @@ body::after {
   left: 20px;
   font-size: 24px;
   font-weight: bold;
-  color: yellow;
+  color: #d9f4ff;
   text-decoration: none;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(2, 13, 24, 0.78);
+  border: 1px solid rgba(141, 227, 255, 0.32);
   padding: 8px 16px;
   border-radius: 8px;
   z-index: 1001;
@@ -404,7 +500,7 @@ body::after {
 }
 
 .back-button:hover {
-  color: cyan;
-  background: rgba(0, 0, 0, 0.9);
+  color: #ffffff;
+  background: rgba(7, 32, 50, 0.92);
   text-decoration: underline;
 }
