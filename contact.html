@@ -5,14 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Tahmid Sahan</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script>
-        (function(){
-            emailjs.init("ETgr4c3PBWg0Ubndo");
-        })();
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
-<body>
+<body class="contact-page">
     <header>
         <nav>
             <a href="index.html">Home</a>
@@ -55,28 +50,57 @@
     </svg>
 
     <main>
-        <section id="contact-info">
-            <h2>Contact Me</h2>
-            <p>If you’d like to get in touch, feel free to reach out via any of the platforms below:</p>
+        <section class="contact-shell" aria-label="Contact Tahmid Sahan">
+            <div class="contact-window">
+                <header class="contact-window-bar">
+                    <h1>Network Monitor</h1>
+                    <span class="connection-pill">Live Ping</span>
+                </header>
 
-            <ul>
-                <li>Primary Email: <a href="mailto:novacrash777@gmail.com">novacrash777@gmail.com</a></li>
-                <li>Secondary Email: <a href="mailto:tahmid.sahan55@myhunter.cuny.edu">tahmid.sahan55@myhunter.cuny.edu</a></li>
-                <li>LinkedIn: <a href="https://www.linkedin.com/in/tahmid-sahan" target="_blank">linkedin.com/in/tahmid-sahan</a></li>
-                <li>GitHub: <a href="https://github.com/tahmids7" target="_blank">github.com/tahmids7</a></li>
-                <li>Phone: <a href="tel:+13474402763">+1 (347) 440-2763</a></li>
-                <li>Discord: txhmids</li>
-                <li>Twitter: txhmids</li>
-            </ul>
+                <div class="terminal-panel">
+                    <div class="terminal-topline">
+                        <span>&gt;_ contact.sh - tahmid@portfolio</span>
+                        <span class="secure-status">Connection Secure</span>
+                    </div>
 
-            
-            <form id="contact-form">
+                    <div class="terminal-grid">
+                        <section class="identity-pane" aria-label="Contact channels">
+                            <h2>## identity</h2>
+                            <p><span>user</span> Tahmid Sahan <strong>verified</strong></p>
+                            <p><span>role</span> Business Analyst @ Verisk</p>
 
-                <label for="message">Write a direct message to me! Please include your name & email address so that I can get back to you!</label><br>
-                <textarea id="message" name="message" rows="4" required></textarea><br>
+                            <h2>## channels</h2>
+                            <ul>
+                                <li><span>email_1</span> <a href="mailto:novacrash777@gmail.com">novacrash777@gmail.com</a></li>
+                                <li><span>email_2</span> <a href="mailto:sahantahmid7@gmail.com">sahantahmid7@gmail.com</a></li>
+                                <li><span>school</span> <a href="mailto:tahmid.sahan55@myhunter.cuny.edu">tahmid.sahan55@myhunter.cuny.edu</a></li>
+                                <li><span>linkedin</span> <a href="https://www.linkedin.com/in/tahmid-sahan" target="_blank" rel="noreferrer">linkedin.com/in/tahmid-sahan</a></li>
+                                <li><span>github</span> <a href="https://github.com/tahmids7" target="_blank" rel="noreferrer">github.com/tahmids7</a></li>
+                                <li><span>phone</span> <a href="tel:+13474402763">+1 (347) 440-2763</a></li>
+                                <li><span>discord</span> txhmids</li>
+                            </ul>
+                        </section>
 
-                <input type="submit" value="Send">
-            </form>
+                        <section class="message-pane" aria-label="Send a message">
+                            <h2>Transmit Message</h2>
+                            <form id="contact-form">
+                                <label for="name">--name</label>
+                                <input id="name" name="from_name" type="text" placeholder="your name" required>
+
+                                <label for="email">--email</label>
+                                <input id="email" name="reply_to" type="email" placeholder="your@email.com" required>
+
+                                <label for="message">--message</label>
+                                <textarea id="message" name="message" rows="5" placeholder="type here..." required></textarea>
+
+                                <input id="name-alias" name="name" type="hidden">
+                                <input id="email-alias" name="email" type="hidden">
+                                <button type="submit">./send.sh</button>
+                            </form>
+                        </section>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
@@ -84,6 +108,6 @@
         <p>&copy; 2024 Tahmid Sahan</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=emailjs-debug-2"></script>
 </body>
 </html>

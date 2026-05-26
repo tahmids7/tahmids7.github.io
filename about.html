@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css"> <!-- Link CSS file -->
     <link rel="stylesheet" href="about.css"> 
 </head>
-<body>
+<body class="about-page">
     <header>
         <nav>
             <a href="index.html">Home</a> 
@@ -51,147 +51,188 @@
     </svg>
 
     <main>
-        <section id="about-me">
-            <h2>About Me</h2>
-            <p>Hello! My name is <strong>Tahmid Sahan</strong>, and I’m currently a senior at CUNY Hunter College, majoring in Computer Science and minoring in Mathematics with an expected graduation date in Spring of 2026. I have a passion for technology and problem-solving, which led me to dive into the vast world of computers.</p>
+        <section class="about-shell" aria-label="About Tahmid Sahan">
+            <div class="about-window">
+                <div class="about-tabs">
+                    <span class="active-tab">README.md</span>
+                    <span>coursework.md</span>
+                    <span class="about-summary">20 courses &middot; 4x Dean's List</span>
+                </div>
 
-            <p>As I continue my studies, I’m exploring various areas of computer science, including algorithms, data structures, and software design. My academic journey has not only strengthened my technical skills but also nurtured my curiosity for innovation and how technology can be used to solve real-world problems. Along with software development, I also have interests in both cybersecurity and information technology.</p>
+                <section class="about-profile">
+                    <div class="avatar">
+                        <img class="profile-photo" src="assets/profile.jpg" alt="Tahmid Sahan" width="72" height="72">
+                    </div>
+                    <div>
+                        <h1>Tahmid Sahan</h1>
+                        <p>Business Analyst @ Verisk &middot; Computer Science &amp; Mathematics &middot; CUNY Hunter College '26</p>
+                        <div class="skill-tags" aria-label="Skills and interests">
+                            <span>Python</span>
+                            <span>JavaScript</span>
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>React</span>
+                            <span>Node</span>
+                            <span>Express</span>
+                            <span>C++</span>
+                            <span>SQL</span>
+                            <span>Cybersecurity</span>
+                        </div>
+                    </div>
+                </section>
 
-            <p>Outside of the college campus, I enjoy working on personal projects, honing my coding skills, and learning new programming languages and tools. With a strong foundation in math, I approach challenges analytically and with a desire to create efficient and elegant solutions. Aside from education, I also enjoy playing video games, reading books, going to the gym regularly, playing sports such as soccer, swimming, and football, and spending time with my family and friends. </p>
+                <p class="about-callout">Hello! My name is Tahmid Sahan. I am a graduate of Hunter College '26, and I'm working as a Business Analyst at Verisk Analytics. I'm passionate about computer systems, algorithms, software design and cybersecurity. I have quite a few years of coding and product design under my belt. Aside from the technical realm, some of my hobbies include watching movies and shows, going to the gym, exploring new cities/countries, hanging out with friends and family, trying out new food places and playing sports.</p>
 
-            <p>I’m excited about the opportunities ahead and am always looking to collaborate, learn, and grow in the tech industry.</p>
-        </section>
+                <div class="stat-section-heading academic-heading">
+                    <span aria-hidden="true"></span>
+                    <h2>Academic</h2>
+                </div>
 
-        <!-- Coursework Section -->
-        <section id="coursework">
-            <h2>Coursework (Dean's List in Fall 2022, Fall 2023, Spring 2025 and Fall 2025)</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Year</th>
-                        <th>Semester</th>
-                        <th>Course ID</th>
-                        <th>Course Name</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>2022</td>
-                        <td>Fall</td>
-                        <td>CSCI 12700</td>
-                        <td>Introduction to Computer Science</td>
-                    </tr>
-                    <tr>
-                        <td>2023</td>
-                        <td>Spring</td>
-                        <td>CSCI 13500</td>
-                        <td>Software Analysis & Design 1 (Intro to C++ and OOP)</td>
-                    </tr>
-                    <tr>
-                        <td>2023</td>
-                        <td>Spring</td>
-                        <td>CSCI 15000</td>
-                        <td>Discrete Mathematics</td>
-                    </tr>
-                    <tr>
-                        <td>2023</td>
-                        <td>Fall</td>
-                        <td>CSCI 23500</td>
-                        <td>Software Analysis & Design 2 (Data Structures)</td>
-                    </tr>
-                    <tr>
-                        <td>2023</td>
-                        <td>Fall</td>
-                        <td>CSCI 16000</td>
-                        <td>Computer Architecture I (Boolean Algebra)</td>
-                    </tr>
-                    <tr>
-                        <td>2023</td>
-                        <td>Fall</td>
-                        <td>MATH 15500</td>
-                        <td>Calculus II</td>
-                    </tr>
-                    <tr>
-                        <td>2024</td>
-                        <td>Spring</td>
-                        <td>CSCI 26000</td>
-                        <td>Computer Architecture II (MIPS & Assembly Language)</td>
-                    </tr>
-                    <tr>
-                        <td>2024</td>
-                        <td>Spring</td>
-                        <td>STAT 21300</td>
-                        <td>Introduction to Applied Statistics</td>
-                    </tr>
-                    <tr>
-                        <td>2024</td>
-                        <td>Fall</td>
-                        <td>CSCI 33500</td>
-                        <td>Software Analysis & Design 3 (Algorithms)</td>
-                    </tr>
-                    <tr>
-                        <td>2024</td>
-                        <td>Fall</td>
-                        <td>CSCI 26500</td>
-                        <td>Computer Thoery I</td>
-                    </tr>
-                    <tr>
-                        <td>2024</td>
-                        <td>Fall</td>
-                        <td>CSCI 39548</td>
-                        <td>Practical Web Development</td>
-                    </tr>
-                    <tr>
-                        <td>2024</td>
-                        <td>Fall</td>
-                        <td>MATH 16000</td>
-                        <td>Matrix Algebra</td>
-                    </tr>
-                    <tr>
-                        <td>2025</td>
-                        <td>Spring</td>
-                        <td>CSCI 13300</td>
-                        <td>Programming for Everyone (Advanced Python)</td>
-                    </tr>
-                    <tr>
-                        <td>2025</td>
-                        <td>Spring</td>
-                        <td>CSCI 49391</td>
-                        <td>Foundations of Game Theory for CS</td>
-                    </tr>
-                    <tr>
-                        <td>2025</td>
-                        <td>Spring</td>
-                        <td>MATH 15600</td>
-                        <td>Math Proofs</td>
-                    </tr>
-                    <tr>
-                        <td>2025</td>
-                        <td>Fall</td>
-                        <td>CSCI 34000</td>
-                        <td>Operating Systems</td>
-                    </tr>
-                    <tr>
-                        <td>2025</td>
-                        <td>Fall</td>
-                        <td>CSCI 43500</td>
-                        <td>Database Management</td>
-                    </tr>
-                    <tr>
-                        <td>2026</td>
-                        <td>Spring</td>
-                        <td>CSCI 499</td>
-                        <td>CSCI Capstone</td>
-                    </tr>
-                    <tr>
-                        <td>2026</td>
-                        <td>Spring</td>
-                        <td>CSCI 49393</td>
-                        <td>Ethics in AI</td>
-                    </tr>
-                    <!-- Add courses  -->
-                </tbody>
-            </table>
+                <section class="about-stats" aria-label="Academic stats">
+                    <div><strong>20</strong><span>STEM Courses Completed</span></div>
+                    <div><strong>'26</strong><span>Computer Science &amp; Math</span><small>Cum Laude</small></div>
+                    <div><strong>5+</strong><span>Years Coding &amp; Designing</span></div>
+                    <div class="blue-stat"><strong><span class="stat-icon">&lt;/&gt;</span> C++</strong><span>Favorite Language</span></div>
+                    <div class="cyan-stat"><strong><span class="stat-icon">⚛</span> React</strong><span>Favorite Framework</span></div>
+                </section>
+
+                <div class="stat-section-heading personal-heading">
+                    <span aria-hidden="true"></span>
+                    <h2>Personal</h2>
+                </div>
+
+                <section class="about-stats personal-stats" aria-label="Personal interests">
+                    <div class="orange-stat"><strong><span class="stat-icon">✈</span> 6+</strong><span>Countries Visited</span></div>
+                    <div class="purple-stat"><strong><span class="stat-icon">👟</span> Sneakerhead</strong><span>10+ Pairs</span></div>
+                    <div class="yellow-stat"><strong><span class="stat-icon">🎮</span> 1000+</strong><span>Hours Gamed</span></div>
+                    <div class="orange-stat"><strong><span class="stat-icon">⚽</span> Soccer</strong><span>Favorite Sport</span></div>
+                    <div class="purple-stat"><strong><span class="stat-icon">文</span> 2</strong><span>Languages Spoken</span></div>
+                </section>
+
+                <section class="timeline-section" aria-labelledby="timeline-heading">
+                    <h2 id="timeline-heading">Academic Timeline</h2>
+
+                    <div class="timeline-year">
+                        <h3>2022</h3>
+                        <article class="course-row">
+                            <code>CSCI 12700</code>
+                            <span>Introduction to Computer Science</span>
+                            <strong class="term fall">Fall</strong>
+                        </article>
+                    </div>
+
+                    <div class="timeline-year">
+                        <h3>2023</h3>
+                        <article class="course-row">
+                            <code>CSCI 13500</code>
+                            <span>Software Analysis &amp; Design 1 (Intro to C++ and OOP)</span>
+                            <strong class="term spring">Spring</strong>
+                        </article>
+                        <article class="course-row">
+                            <code>CSCI 15000</code>
+                            <span>Discrete Mathematics</span>
+                            <strong class="term spring">Spring</strong>
+                        </article>
+                        <article class="course-row">
+                            <code>CSCI 23500</code>
+                            <span>Software Analysis &amp; Design 2 (Data Structures)</span>
+                            <strong class="term fall">Fall</strong>
+                        </article>
+                        <article class="course-row">
+                            <code>CSCI 16000</code>
+                            <span>Computer Architecture I (Boolean Algebra)</span>
+                            <strong class="term fall">Fall</strong>
+                        </article>
+                        <article class="course-row">
+                            <code>MATH 15500</code>
+                            <span>Calculus II</span>
+                            <strong class="term fall">Fall</strong>
+                        </article>
+                    </div>
+
+                    <div class="timeline-year">
+                        <h3>2024</h3>
+                        <article class="course-row">
+                            <code>CSCI 26000</code>
+                            <span>Computer Architecture II (MIPS &amp; Assembly Language)</span>
+                            <strong class="term spring">Spring</strong>
+                        </article>
+                        <article class="course-row">
+                            <code>STAT 21300</code>
+                            <span>Introduction to Applied Statistics</span>
+                            <strong class="term spring">Spring</strong>
+                        </article>
+                        <article class="course-row">
+                            <code>CSCI 33500</code>
+                            <span>Software Analysis &amp; Design 3 (Algorithms)</span>
+                            <strong class="term fall">Fall</strong>
+                        </article>
+                        <article class="course-row">
+                            <code>CSCI 26500</code>
+                            <span>Computer Theory I</span>
+                            <strong class="term fall">Fall</strong>
+                        </article>
+                        <article class="course-row">
+                            <code>CSCI 39548</code>
+                            <span>Practical Web Development</span>
+                            <strong class="term fall">Fall</strong>
+                        </article>
+                        <article class="course-row">
+                            <code>MATH 16000</code>
+                            <span>Matrix Algebra</span>
+                            <strong class="term fall">Fall</strong>
+                        </article>
+                    </div>
+
+                    <div class="timeline-year">
+                        <h3>2025</h3>
+                        <article class="course-row">
+                            <code>CSCI 13300</code>
+                            <span>Programming for Everyone (Advanced Python)</span>
+                            <strong class="term spring">Spring</strong>
+                        </article>
+                        <article class="course-row">
+                            <code>CSCI 49391</code>
+                            <span>Foundations of Game Theory for CS</span>
+                            <strong class="term spring">Spring</strong>
+                        </article>
+                        <article class="course-row">
+                            <code>MATH 15600</code>
+                            <span>Math Proofs</span>
+                            <strong class="term spring">Spring</strong>
+                        </article>
+                        <article class="course-row">
+                            <code>CSCI 34000</code>
+                            <span>Operating Systems</span>
+                            <strong class="term fall">Fall</strong>
+                        </article>
+                        <article class="course-row">
+                            <code>CSCI 43500</code>
+                            <span>Database Management</span>
+                            <strong class="term fall">Fall</strong>
+                        </article>
+                    </div>
+
+                    <div class="timeline-year">
+                        <h3>2026</h3>
+                        <article class="course-row">
+                            <code>CSCI 499</code>
+                            <span>CSCI Capstone</span>
+                            <strong class="term spring">Spring</strong>
+                        </article>
+                        <article class="course-row">
+                            <code>CSCI 49393</code>
+                            <span>Ethics in AI</span>
+                            <strong class="term spring">Spring</strong>
+                        </article>
+                        <article class="course-row">
+                            <code>CSCI 183</code>
+                            <span>Independent Workshop</span>
+                            <strong class="term spring">Spring</strong>
+                        </article>
+                    </div>
+                </section>
+            </div>
         </section>
     </main>
 

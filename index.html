@@ -6,7 +6,7 @@
     <title>Tahmid Sahan's Website</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="home-page">
     <!-- Insert the cog SVG -->
     <svg class="rotating-cog" xmlns="http://www.w3.org/2000/svg" version="1.0"
         width="221.000000pt" height="228.000000pt" viewBox="0 0 221.000000 228.000000"
@@ -44,37 +44,65 @@
     </svg>
 
     <main>
-        <section class="home-hero">
-            <h1 class="title">Tahmid Sahan</h1>
-            <p class="role-pill">Business Analyst @ Verisk</p>
-        </section>
+        <section class="home-shell" aria-label="Tahmid Sahan overview">
+            <div class="home-hero bento-panel">
+                <h1 class="title">Tahmid Sahan</h1>
+                <p class="role-pill">Business Analyst &middot; Verisk</p>
+                <p class="home-subtitle">Previous UAT Engineer Intern at Verisk &middot; Ex System Analyst at NYC H+H &middot; Ex Information Technology Analyst at NYC OTI</p>
+            </div>
 
-        <section class="grid home-grid">
-            <a href="about.html" class="card">
-                <h2>About Me &rarr;</h2>
-                <p>Learn more about my background, coursework, and interests.</p>
-            </a>
-            <a href="https://www.linkedin.com/in/tahmid-sahan/" class='card'>
-                <h2>LinkedIn &rarr;</h2>
-                <p>Look into where I've worked/interned + why not connect with me as well!</p>
-            </a>
-            <a href="https://github.com/tahmids7" class='card'>
-                <h2>Github &rarr;</h2>
-                <p>Access my github porfolio, along with my coursework and contributions here!</p>
-            </a>
-            <a href="projects.html" class="card">
-              <h2>Projects &rarr;</h2>
-              <p>View some projects here!</p>
-            </a>
-            <a href="contact.html" class="card">
-                <h2>Contact &rarr;</h2>
-                <p>Reach me by email, LinkedIn, GitHub, phone, or a direct message.</p>
-            </a>
+            <section class="stats-grid" aria-label="Quick stats">
+                <div class="stat-card bento-panel">
+                    <strong>8</strong>
+                    <span>Projects</span>
+                </div>
+                <div class="stat-card bento-panel">
+                    <strong>4x</strong>
+                    <span>Dean's List</span>
+                </div>
+                <div class="stat-card bento-panel">
+                    <strong>3</strong>
+                    <span>Internships</span>
+                </div>
+                <div class="stat-card bento-panel">
+                    <strong>'26</strong>
+                    <span>Computer Science &amp; Mathematics</span>
+                    <small>Hunter College</small>
+                    <small>Cum Laude</small>
+                </div>
+            </section>
+
+            <section class="home-grid" aria-label="Main links">
+                <a href="projects.html" class="card bento-card card-wide">
+                    <span class="card-icon" aria-hidden="true">▦</span>
+                    <h2>Projects &rarr;</h2>
+                    <p>Pokédex, Recipe Finder, NIDS &amp; more</p>
+                </a>
+                <a href="about.html" class="card bento-card">
+                    <span class="card-icon" aria-hidden="true">◎</span>
+                    <h2>About &rarr;</h2>
+                    <p>Background &amp; coursework</p>
+                </a>
+                <a href="https://github.com/tahmids7" class="card bento-card" target="_blank" rel="noreferrer">
+                    <span class="card-icon" aria-hidden="true">{ }</span>
+                    <h2>GitHub &rarr;</h2>
+                    <p>See my repos</p>
+                </a>
+                <a href="https://www.linkedin.com/in/tahmid-sahan/" class="card bento-card" target="_blank" rel="noreferrer">
+                    <span class="card-icon" aria-hidden="true">in</span>
+                    <h2>LinkedIn &rarr;</h2>
+                    <p>Work history</p>
+                </a>
+                <a href="contact.html" class="card bento-card">
+                    <span class="card-icon" aria-hidden="true">@</span>
+                    <h2>Contact &rarr;</h2>
+                    <p>Get in touch</p>
+                </a>
+            </section>
         </section>
     </main>
 
     <div class="afterglow"></div>
-     <div class="content">
     <script src="script.js"></script>
 </body>
 </html>
