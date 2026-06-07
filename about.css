@@ -41,7 +41,7 @@ body {
 }
 
 .about-shell {
-  width: min(1120px, 100%);
+  width: min(1488px, 100%);
 }
 
 .about-window {
@@ -320,100 +320,153 @@ body {
   }
 }
 
-.timeline-section h2 {
-  margin: 0 0 1.2rem;
+.course-showcase {
+  overflow: hidden;
+  border: 1px solid rgba(217, 244, 255, 0.16);
+  border-radius: 8px;
+  background: rgba(5, 11, 18, 0.96);
+}
+
+.course-showcase-bar {
+  min-height: 64px;
+  display: flex;
+  align-items: center;
+  padding: 0 1.75rem;
+  border-bottom: 1px solid rgba(217, 244, 255, 0.14);
+  background: rgba(34, 34, 31, 0.9);
+}
+
+.course-showcase-bar h2 {
+  margin: 0;
   color: #f7fbff;
-  font-size: 1.25rem;
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  line-height: 1.15;
 }
 
-.timeline-year {
-  position: relative;
+.course-semesters {
+  padding: 2.5rem 2rem;
+}
+
+.semester-group {
   display: grid;
-  gap: 0.55rem;
-  padding-left: 1.55rem;
+  gap: 0.6rem;
 }
 
-.timeline-year + .timeline-year {
-  margin-top: 1rem;
+.semester-group + .semester-group {
+  margin-top: 1.35rem;
 }
 
-.timeline-year::before {
-  content: "";
-  position: absolute;
-  top: 1rem;
-  bottom: -1rem;
-  left: 0.34rem;
-  width: 1px;
-  background: rgba(125, 255, 207, 0.24);
+.semester-header {
+  min-height: 66px;
+  display: grid;
+  grid-template-columns: auto max-content max-content 1fr;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.9rem 1.75rem;
+  border: 1px solid var(--semester-border);
+  border-radius: 14px;
+  background: var(--semester-bg);
 }
 
-.timeline-year:last-child::before {
-  bottom: 0.7rem;
-}
-
-.timeline-year h3 {
-  position: relative;
-  margin: 0 0 0.1rem;
-  color: #7dffcf;
-  font-size: 0.95rem;
-  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
-}
-
-.timeline-year h3::before {
-  content: "";
-  position: absolute;
-  top: 0.25rem;
-  left: -1.52rem;
-  width: 11px;
-  height: 11px;
+.semester-dot {
+  width: 17px;
+  height: 17px;
   border-radius: 50%;
-  background: #7dffcf;
-  box-shadow: 0 0 18px rgba(125, 255, 207, 0.6);
+  background: var(--semester-accent);
+  box-shadow: 0 0 18px var(--semester-glow);
+  animation: semesterPulse 1.75s ease-in-out infinite;
+}
+
+.semester-header h3 {
+  margin: 0;
+  color: var(--semester-accent);
+  font-size: 1.35rem;
+  line-height: 1;
+}
+
+.course-count {
+  color: rgba(217, 244, 255, 0.58);
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.course-count::before {
+  content: "\00B7";
+  margin-right: 0.45rem;
+  color: rgba(217, 244, 255, 0.4);
+}
+
+.deans-badge {
+  justify-self: end;
+  min-height: 34px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 0.95rem;
+  border: 1px solid rgba(255, 218, 68, 0.54);
+  border-radius: 999px;
+  color: #ffdf4f;
+  background: rgba(35, 27, 0, 0.84);
+  font-size: 0.88rem;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.deans-badge::before {
+  content: "🎖︎";
+  margin-right: 0.45rem;
+  font-size: 0.86rem;
+}
+
+.fall-semester {
+  --semester-accent: #d7a1ff;
+  --semester-border: rgba(215, 161, 255, 0.34);
+  --semester-bg: rgba(39, 26, 51, 0.72);
+  --semester-glow: rgba(215, 161, 255, 0.62);
+}
+
+.spring-semester {
+  --semester-accent: #78f0ce;
+  --semester-border: rgba(120, 240, 206, 0.34);
+  --semester-bg: rgba(17, 47, 36, 0.72);
+  --semester-glow: rgba(120, 240, 206, 0.62);
 }
 
 .course-row {
   display: grid;
-  grid-template-columns: 116px minmax(0, 1fr) 70px;
+  grid-template-columns: 172px minmax(0, 1fr);
   align-items: center;
   gap: 1rem;
-  min-height: 40px;
-  padding: 0.45rem 0.75rem;
+  min-height: 60px;
+  padding: 0.7rem 1.55rem;
   border: 1px solid rgba(171, 223, 255, 0.18);
-  border-radius: 7px;
-  background: rgba(12, 22, 32, 0.9);
+  border-radius: 12px;
+  background: rgba(17, 24, 34, 0.94);
 }
 
 .course-row code {
   color: rgba(217, 244, 255, 0.62);
   font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
-  font-size: 0.82rem;
+  font-size: 1rem;
+  font-weight: 800;
 }
 
 .course-row span {
-  color: #f7fbff;
-  font-size: 0.9rem;
+  color: rgba(247, 251, 255, 0.86);
+  font-size: 1rem;
   font-weight: 700;
 }
 
-.term {
-  justify-self: end;
-  min-width: 58px;
-  padding: 0.2rem 0.45rem;
-  border-radius: 5px;
-  font-size: 0.72rem;
-  text-align: center;
-}
-
-.term.spring {
-  border: 1px solid rgba(125, 255, 207, 0.44);
-  color: #7dffcf;
-  background: rgba(18, 83, 58, 0.42);
-}
-
-.term.fall {
-  border: 1px solid rgba(197, 140, 255, 0.44);
-  color: #d6a9ff;
-  background: rgba(44, 24, 62, 0.46);
+@keyframes semesterPulse {
+  0%, 100% {
+    opacity: 0.7;
+    transform: scale(0.88);
+    box-shadow: 0 0 12px var(--semester-glow);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: 0 0 24px var(--semester-glow);
+  }
 }
 
 .about-page footer {
@@ -448,7 +501,24 @@ body {
     gap: 0.35rem;
   }
 
-  .term {
+  .course-showcase-bar {
+    padding-block: 1rem;
+  }
+
+  .course-semesters {
+    padding: 1.25rem;
+  }
+
+  .semester-header {
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+
+  .course-count {
+    grid-column: 2;
+  }
+
+  .deans-badge {
+    grid-column: 2;
     justify-self: start;
   }
 }
